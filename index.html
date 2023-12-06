@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logoicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/mobile-first.css">
+    <link rel="stylesheet" href="style/large-screen.css" media="screen and (min-width: 600px)">
+    <script src="https://kit.fontawesome.com/3954e72066.js" crossorigin="anonymous"></script>
+    <title>Smart To Do</title>
+</head>
+<body>
+    <section class="container">
+        <section class="container-header">
+            <img src="assets/logo-smart-todo.png" alt="Logo da Smart To Do">
+        </section>
+
+        <section class="container-edit hide">
+            <label for="input-edit-task">Edit your task:</label>
+            <section class="controls-edit">
+                <input type="text" id="input-edit-task" autocomplete="off">
+                <button id="edit-task-btn">&dArr;</button>
+            </section>
+            <button id="cancel-edit-btn">Cancel</button>
+        </section>
+
+        <section class="container-edit-list hide">
+            <label for="input-edit-list">Edit your list:</label>
+            <section class="controls-edit-list">
+                <input type="text" id="input-edit-list" autocomplete="off">
+                <button id="confirm-edit-list-btn">&dArr;</button>
+            </section>
+            <p class="error-list-exist hide error">There is already a list with that name</p>
+            <button id="cancel-edit-list-btn">Cancel</button>
+        </section>
+
+        <section class="container-add-list hide">
+            <label for="input-add-list">Add your list:</label>
+            <section class="controls-add-list">
+                <input type="text" id="input-add-list" placeholder="What will this list be directed to?" autocomplete="off">
+                <button id="confirm-add-list-btn">&dArr;</button>
+            </section>
+            <p class="error-name-exist hide error">This name already exists!</p>
+            <p class="error-name-empty hide error">You cannot add an empty name!</p>
+            <button id="cancel-list-btn">Cancel</button>
+        </section>
+
+        <section class="container-settings">
+            <section class="container-lists">
+                <label for="sel-lists">Choose your list:</label>
+                <select id="sel-lists">
+
+                </select>
+                <section class="controls-list">
+                    <button class="add-list-btn">&plus;</button>
+                    <button class="edit-list-btn"><i class="fa-solid fa-pen"></i></button>
+                    <button class="remove-list-btn"><i class="fa-solid fa-xmark"></i></button>
+                </section>
+            </section>
+
+            <section class="container-add-tasks">
+                <label for="input-add-task">Add your task:</label>
+                <section class="controls-add-task">
+                    <input type="text" id="input-add-task" placeholder="What do you have to do?" autocomplete="off">
+                    <button id="add-task-btn">&plus;</button>
+                </section>
+                <section class="controls-hour">
+                    <section class="container-hour">
+                        <label for="sel-add-hour">Hours:</label>
+                        <select id="sel-add-hour">
+                            <option value="00">00</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                        </select>
+                    </section>
+
+                    <section class="container-min">
+                        <label for="sel-add-min">Minutes:</label>
+                        <select id="sel-add-min">
+                            <option value="00">00</option>
+                            <option value="05">05</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                            <option value="40">40</option>
+                            <option value="45">45</option>
+                            <option value="50">50</option>
+                            <option value="55">55</option>
+                        </select>
+                    </section>
+                </section>
+                <p class="error-create-list hide error">Create a list first</p>
+                <p class="error-name-task-exist hide error">A task with that name already exists</p>
+            </section>
+
+            <section class="container-search-filter">
+                <section class="container-search">
+                    <label for="input-search">Search:</label>
+                    <input type="text" id="input-search" placeholder="Search..." autocomplete="off">
+                </section>
+                <section class="container-filter">
+                    <label for="sel-filter">Filter:</label>
+                    <select id="sel-filter">
+                        <option value="all">All</option>
+                        <option value="done">Done</option>
+                        <option value="to-do">To Do</option>
+                    </select>
+                </section>
+            </section>
+        </section>
+
+        <section class="container-tasks">
+            
+        </section>
+    </section>
+
+    <script src="js/hideAndShow.js"></script>
+    <script src="js/createTask.js"></script>
+    <script src="js/createLists.js"></script>
+    <script src="js/toolsTask.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/toolsLists.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

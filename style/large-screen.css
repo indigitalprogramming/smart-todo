@@ -1,0 +1,32 @@
+body {
+    background: url(../assets/background.jpg) no-repeat fixed center center;
+    background-size: cover;
+}
+
+.container {
+    width: 500px;
+}
+
+.container-search-filter label {
+    display: block;
+}
+
+.container-search {
+    width: 65%;
+}
+
+.container-filter {
+    width: 30%;
+}
+
+.container-search-filter input, .container-search-filter select {
+    width: 100%;
+}
+
+.task-settings {
+    width: 20%;
+}
+
+.task-settings button {
+    width: 28px;
+}
